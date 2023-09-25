@@ -36,6 +36,7 @@ def index():
   session['name'] = form.name.data
   session['email'] = form.email.data
   session['uoft_email'] = uoft_email
+  
   return redirect(url_for('index'))
  return render_template('index.html', form=form, name=session.get('name'), email = session.get('email'), uoft_email = session.get("uoft_email"))
 
